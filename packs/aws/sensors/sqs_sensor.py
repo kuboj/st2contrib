@@ -32,7 +32,7 @@ class AWSSQSSensor(PollingSensor):
                                            poll_interval=poll_interval)
 
     def setup(self):
-        self.input_queue = self._get_config_entry(key='keys ', prefix='sqs_sensor')
+        self.input_queue = self._get_config_entry(key='input_queue', prefix='sqs_sensor')
         self.aws_access_key = self._get_config_entry('aws_access_key_id')
         self.aws_secret_key = self._get_config_entry('aws_access_key_id')
         self.aws_region = self._get_config_entry('region')
